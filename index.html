@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        title{
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        body{
+            background-color: rgb(156, 138, 117);
+        }
+    .but
+    {
+        background-color: rgb(148, 148, 179);
+        font-size: 20px;
+        width: 200px;
+        height: 40px;
+   margin-top: 300px;
+margin-left: 570px;
+    }
+
+    </style>
+</head>
+<body>
+    <input type="button" onclick="clickCounter()" class="but">
+   
+    <script>
+        let clicker = +localStorage.getItem('clicker');
+
+    const button = document.querySelector('input[type="button"]');
+    button.value = `Басылды ${clicker} жолу`;
+
+    function clickCounter() {
+        localStorage.setItem('clicker', ++clicker);
+    button.value = `Басылды ${clicker} жолу`
+ 
+  
+}
+
+    </script>
+    
+</body>
+</html>
